@@ -67,7 +67,8 @@
   ],
   "preferGlobal": "true",
   "dependencies": {
+    "gettext-parser": "1.1.0",
     "nomnom": "1.8.1",
-    "gettext-parser": "1.1.0"
+    "when": "^3.7.5"
   }
 }

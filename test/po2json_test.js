@@ -109,8 +109,10 @@ module.exports["parseFileSync"] = {
   },
 
   parseFileSync: function(test){
-    var parsed = po2json.parseFileSync(__dirname + "/fixtures/pl.po");
-    test.deepEqual(parsed, this.json);
+   var _this = this;
+   po2json.parseFileSync(__dirname + "/fixtures/pl.po").then(function(parsed) {
+    test.deepEqual(parsed, _this.json);
     test.done();
+   });
   }
 }

@@ -50,4 +50,6 @@ opts.stringify = true;
 var result = po2json.parseFileSync(opts.input, opts),
     stream = fs.createWriteStream(opts.output, {});
 
-stream.write(result);
+result.then(function(data) {
+    stream.write(data);
+});
